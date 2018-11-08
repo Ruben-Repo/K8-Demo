@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.ewolff.microservice.customer.cdc.CustomerConsumerDrivenContractTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.644 s - in com.ewolff.microservice.customer.cdc.CustomerConsumerDrivenContractTest

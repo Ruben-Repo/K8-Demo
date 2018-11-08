@@ -1,0 +1,5 @@
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-catalog/src/main/java/com/ewolff/microservice/catalog/web/CatalogController.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-catalog/src/main/java/com/ewolff/microservice/catalog/Item.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-catalog/src/main/java/com/ewolff/microservice/catalog/CatalogApp.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-catalog/src/main/java/com/ewolff/microservice/catalog/ItemRepository.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-catalog/src/main/java/com/ewolff/microservice/catalog/SpringRestDataConfig.java

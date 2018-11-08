@@ -1,0 +1,5 @@
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-customer/src/test/java/com/ewolff/microservice/customer/cdc/CustomerConsumerDrivenContractTest.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-customer/src/test/java/com/ewolff/microservice/customer/cdc/Customer.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-customer/src/test/java/com/ewolff/microservice/customer/CustomerWebIntegrationTest.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-customer/src/test/java/com/ewolff/microservice/customer/CustomerTestApp.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-customer/src/test/java/com/ewolff/microservice/customer/cdc/CustomerClient.java

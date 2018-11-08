@@ -1,0 +1,6 @@
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-order/src/test/java/com/ewolff/microservice/order/OrderTestApp.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-order/src/test/java/com/ewolff/microservice/order/logic/OrderWebIntegrationTest.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-order/src/test/java/com/ewolff/microservice/order/logic/CustomerConsumerDrivenContractTest.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-order/src/test/java/com/ewolff/microservice/order/logic/CatalogConsumerDrivenContractTest.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-order/src/test/java/com/ewolff/microservice/order/catalogstub/CatalogStub.java
+/home/ruben/Projects/Kubernetes-Demo/microservice-kubernetes-demo/microservice-kubernetes-demo-order/src/test/java/com/ewolff/microservice/order/customerstub/CustomerStub.java

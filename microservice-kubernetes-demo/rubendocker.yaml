@@ -1,0 +1,139 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: apache
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: apache
+    spec:
+      containers:
+      - name: apache-container
+        image: rubendocker/microservice-kubernetes-demo-apache:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apache
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: apache
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: catalog
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: catalog
+    spec:
+      containers:
+      - name: catalog-container
+        image: rubendocker/microservice-kubernetes-demo-catalog:latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalog
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: catalog
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: customer
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: customer
+    spec:
+      containers:
+      - name: customer-container
+        image: rubendocker/microservice-kubernetes-demo-customer:T1
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: customer
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: hystrix-dashboard
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dashboard
+    spec:
+      containers:
+      - name: dashboard-container
+        image: rubendocker/microservice-kubernetes-demo-hystrix-dashboard:latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hystrix-dashboard
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: dashboard
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+      - name: demo-container
+        image: rubendocker/microservice-kubernetes-demo-order:latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: demo

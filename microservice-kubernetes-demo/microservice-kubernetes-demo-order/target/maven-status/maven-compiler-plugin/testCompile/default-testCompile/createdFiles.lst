@@ -1,0 +1,6 @@
+com/ewolff/microservice/order/logic/OrderWebIntegrationTest.class
+com/ewolff/microservice/order/customerstub/CustomerStub.class
+com/ewolff/microservice/order/logic/CatalogConsumerDrivenContractTest.class
+com/ewolff/microservice/order/logic/CustomerConsumerDrivenContractTest.class
+com/ewolff/microservice/order/OrderTestApp.class
+com/ewolff/microservice/order/catalogstub/CatalogStub.class

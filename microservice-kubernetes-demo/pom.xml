@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.1.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ewolff</groupId>
+	<artifactId>microservice-kubernetes-demo</artifactId>
+	<version>1.0-SNAPSHOT</version> 
+		<packaging>pom</packaging>
+
+	<modules>
+		<module>microservice-kubernetes-demo-hystrix-dashboard</module>
+		<module>microservice-kubernetes-demo-customer</module>
+		<module>microservice-kubernetes-demo-catalog</module>
+		<module>microservice-kubernetes-demo-order</module>
+	</modules>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+		<jacoco.plugin.version>0.8.1</jacoco.plugin.version>
+		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+   				<groupId>org.codehaus.mojo</groupId>
+   				<artifactId>sonar-maven-plugin</artifactId>
+   				<version>2.3</version>
+			</plugin>
+      		<!-- Plugin for Sonar Coverage Check -->
+    	    <!--<plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.9</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin> -->
+		</plugins>
+		<pluginManagement>
+            <plugins>
+                <!-- Maven Surefire Plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.20</version>
+                </plugin>
+			</plugins>
+        </pluginManagement>
+	</build>
+	<distributionManagement>
+    	<repository>
+      		<id>nexus</id>
+      		<name>Releases</name>
+      		<url>http://localhost:8081/repository/maven-releases</url>
+    	</repository>
+    	<snapshotRepository>
+      		<id>nexus</id>
+      		<name>Snapshot</name>
+      		<url>http://localhost:8081/repository/maven-snapshots</url>
+   		 </snapshotRepository>
+  	</distributionManagement> 
+
+</project>

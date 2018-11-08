@@ -1,0 +1,140 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: apache
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: apache
+    spec:
+      containers:
+      - name: apache-container
+        image: engdopaksacr.azurecr.io/apache:img_id
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: apache
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: apache
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: catalog
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: catalog
+    spec:
+      containers:
+      - name: catalog-container
+        image: engdopaksacr.azurecr.io/catalog:img_id
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: catalog
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: catalog
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: customer
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: customer
+    spec:
+      containers:
+      - name: customer-container
+        image: engdopaksacr.azurecr.io/customer:img_id
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customer
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: customer
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: dashboard
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: dashboard
+    spec:
+      containers:
+      - name: dashboard-container
+        image: engdopaksacr.azurecr.io/dashboard:img_id
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: dashboard
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+      - name: demo-container
+        image: engdopaksacr.azurecr.io/demo:img_id
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: demo
+

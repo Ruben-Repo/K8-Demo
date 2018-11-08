@@ -1,0 +1,6 @@
+com/ewolff/microservice/customer/cdc/CustomerClient$CustomerPagedResources.class
+com/ewolff/microservice/customer/cdc/Customer.class
+com/ewolff/microservice/customer/CustomerTestApp.class
+com/ewolff/microservice/customer/CustomerWebIntegrationTest.class
+com/ewolff/microservice/customer/cdc/CustomerClient.class
+com/ewolff/microservice/customer/cdc/CustomerConsumerDrivenContractTest.class

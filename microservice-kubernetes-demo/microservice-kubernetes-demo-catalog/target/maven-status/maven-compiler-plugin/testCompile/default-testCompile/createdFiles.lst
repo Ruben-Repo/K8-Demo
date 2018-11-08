@@ -1,0 +1,7 @@
+com/ewolff/microservice/catalog/CatalogWebIntegrationTest.class
+com/ewolff/microservice/catalog/cdc/CatalogClient$ItemPagedResources.class
+com/ewolff/microservice/catalog/RepositoryTest.class
+com/ewolff/microservice/catalog/cdc/CatalogClient.class
+com/ewolff/microservice/catalog/CatalogTestApp.class
+com/ewolff/microservice/catalog/cdc/CatalogConsumerDrivenContractTest.class
+com/ewolff/microservice/catalog/cdc/Item.class
